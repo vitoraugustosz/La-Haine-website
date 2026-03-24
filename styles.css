@@ -1,0 +1,32 @@
+
+:root{
+    --preto:        #0a0a0a;
+    --branco:       #f2f0eb;
+    --accent:       #c0392b;
+
+
+    --font-title: 'Bebas Neue', sans-serif;
+    --font-body: "IBM Plex Mono", monospace;
+}
+
+body {
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: var(--font-body);
+}
+
+h1 {
+    font-family: var(--font-title);
+}
+
+article {
+    text-align: center;
+}
+
+.texto-jornal {
+    column-count: 2;
+    column-gap: 30px;
+    text-align: justify;
+    /* Adjust the gap between columns */
+}
+
