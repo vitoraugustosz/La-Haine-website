@@ -15,18 +15,136 @@ body {
     font-family: var(--font-body);
 }
 
-h1 {
-    font-family: var(--font-title);
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-article {
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  color: inherit;
+}
+
+h1 {
+    font-family: var(--font-title);
+    margin: 1vh 5vw 1vh 5vw;
+    padding: 8vh 8vw 3vh 8vw;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: var(--font-body);
+    color: var(--branco);
     text-align: center;
 }
 
-.texto-jornal {
-    column-count: 2;
-    column-gap: 30px;
-    text-align: justify;
-    /* Adjust the gap between columns */
+article {
+    margin: 0 5vw;
+    padding: 0 10vw;
+    background-color: var(--preto);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h2 {
+    font-size: 2.3rem;
+    margin-bottom: 16px;
+}
+.bloco-jornal {
+  position: center;
+  width: 56vw;
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+.texto {
+  column-count: 2;
+  column-gap: 60px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.imagem-central {
+
+  width: 450px;
+  float: left;
+  shape-outside: inset(0);
+}
+
+/* =-=-=-=-=-=-=-=--=-=-=-=-==== 
+Estilos para a seção de personagens 
+=-=-=-=--=-==-=-=-=-=-=-=-=-=-=-=*/
+
+
+
+.personagens {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    padding: 48px 0;
+}
+
+.card-personagem {
+    width: 280px;
+    height: 420px;
+    border: 2px solid var(--branco);
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer; /*indica que o container é clicável*/
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.container-clicavel {
+    display: block;  /*evita que o link do container mude o estilo por ser um link (inline)*/
+    text-decoration: none; /*tira decoracao especial de links*/
+    color: inherit; /*garante que a cor do texto seja a mesma do container, mesmo sendo um link*/
+
+}   
+.card-personagem img {
+    width: 100%;
+    height: 120px;          /* altura fixa igual para todos */
+    object-fit: cover;      /* cobre toda a área, cortando o excesso, ou seja, náo distoece a imagem pelo tamanho dela */
+  
+    display: block;
+    filter: grayscale(100%) contrast(120%);
+    transition: filter 0.15s;
+}
+
+.card-personagem h3 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    margin: 16px 16px 8px;
+    letter-spacing: 2px;
+    transition: color 0.15s;
+}
+
+.card-personagem p {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    margin: 0 16px 20px;
+    font-style: italic;
+    transition: color 0.15s;
+}
+
+/* Hover — inversão total */
+.card-personagem:hover {
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+.card-personagem:hover img {
+    filter: grayscale(100%) contrast(120%) invert(1);
+}
+
+.card-personagem:hover h3,
+.card-personagem:hover p {
+    color: var(--preto);
 }
 
