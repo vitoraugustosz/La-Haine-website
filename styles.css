@@ -15,6 +15,39 @@ body {
     font-family: var(--font-body);
 }
 
+main {
+    grid-template-areas: 
+    "nav nav nav"
+    "article article article"
+    "footer footer footer";
+}
+
+nav { 
+    margin: 3vh 3vw;
+    padding: 5vh 3vw 1vh 3vw;
+    height: auto;
+    display: flex;              /**/
+    flex-direction: row;        /* Barra de navegação centralizada com itens em linha horizontal    */
+    justify-content: center;    /**/
+    gap: 4em;
+}
+
+nav a:hover {
+    background-color: var(--branco);
+    color: var(--preto);
+    transition: 90  ms;
+}
+
+/*
+===================
+Página linha do tempo
+====================
+*/
+
+.linha-do-tempo img {
+    height: 150px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -35,7 +68,7 @@ a:active {
 h1 {
     font-family: var(--font-title);
     margin: 1vh 5vw 1vh 5vw;
-    padding: 8vh 8vw 3vh 8vw;
+    padding: 3vh 8vw;
     font-size: 3em;
 }
 
@@ -93,7 +126,7 @@ Estilos para a seção de personagens
 
 .card-personagem {
     width: 280px;
-    height: 420px;
+    height: 300px;
     border: 2px solid var(--branco);
     padding: 0;
     overflow: hidden;
