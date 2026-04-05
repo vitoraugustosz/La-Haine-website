@@ -135,25 +135,22 @@ blockquote {
     font-size: 2rem;
     margin-bottom: 16px;
 }
-.bloco-jornal {
-  position: center;
-  width: 56vw;
-  margin: auto;
-  font-size: 1.5rem;
+.texto-jornal {
+    column-count: 2;
+    column-gap: 30px;
+    text-align: justify;
 }
 
-.texto {
-  column-count: 2;
-  column-gap: 60px;
-  text-align: justify;
-  line-height: 1.6;
+.foto-jornal {
+    float: right;           /* ancora na direita da coluna */
+    width: 100%;            /* ocupa a largura da coluna */
+    margin: 0 0 12px 0;
 }
 
-.imagem-central {
-
-  width: 450px;
-  float: left;
-  shape-outside: inset(0);
+.texto-jornal::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 /* =-=-=-=-=-=-=-=--=-=-=-=-==== 
