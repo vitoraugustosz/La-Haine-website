@@ -58,15 +58,19 @@ a:active {
 
 h1 {
     font-family: var(--font-title);
-    margin: 1vh 5vw 1vh 5vw;
-    padding: 3vh 8vw;
-    font-size: 3em;
+    font-size: 15em;
+    text-align: center;
+    margin-bottom: 500px;
 }
 
 h2 {
     font-family: var(--font-body);
     color: var(--branco);
     text-align: center;
+}
+
+section {
+    margin-bottom: 500px;
 }
 
 article {
@@ -82,80 +86,53 @@ main.page-timeline {
     padding: 0 10vw;
 }
 
-/*
-===================
-Página linha do tempo
-====================
-*/
-
-.timeline {
-    position: relative; /*elemento fica na posição normal*/
-    padding: 20px 0;
+.accent {
+    color: var(--accent);
 }
 
-/*linha vertical conectando os pontos, aprendido no canal Coding2GO*/
-.timeline::before {
-    content: "";
-    position: absolute;      /*vai para o começo, na esquerda */
-    left: 6.5px;              /*posição horizontal da linha*/
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background-color: var(--branco);
-}
-
-.timeline-item { 
-    display: flex;  /*um do ladinho do outro*/
-    gap: 32px;
-    margin: 60px 0 240px 0;
-    margin-bottom: 120px;
-    position: relative;
-}
-
-/*quadrado marcador*/
-.timeline-marcador { /*basicamente um container sem nenhum texto*/
-    width: 16px;
-    height: 16px;
-    background-color: var(--branco);
-    flex-shrink: 0; /*elemento não encolhe no grid*/
-    margin-top: 4px;
-    position: relative;
-    z-index: 1;  /*Fica sobre os itens, no caso, sobre a linha*/
-}
-
-.timeline-titulo {
-    font-family: var(--font-title);
-    font-size: 1.6rem;
-    margin: 0 0 16px;
-}
-
-/*Foto e texto um do ladinho do outro*/
-.timeline-corpo {
-    display: flex;
-    gap: 24px;
-    align-items: flex-start;
-}
-
-.timeline-corpo img {
-    width: 320px;
-    flex-shrink: 0;
-    filter: grayscale(100%) contrast(115%);
-}
-
-.timeline-corpo p {
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    line-height: 1.8;
-    text-align: justify;
-}
 
 /*
-=========================
+=======================================
+Digitando
+====================================
 */
+
+blockquote {
+    text-align: center; 
+    width: fit-content;
+    height: fit-content;
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--branco); /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto 500px auto;;
+  letter-spacing: .15em; /* Adjust as needed */
+  width: 0;
+  /* Adjust 'steps' to match the number of characters in your text */
+  animation: 
+    typing 3.5s steps(27, end) forwards,
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 31ch }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--branco); }
+}
+
+
 
 
 .hero h2 {
-    font-size: 2.3rem;
+    font-size: 2rem;
     margin-bottom: 16px;
 }
 .bloco-jornal {
@@ -250,6 +227,73 @@ Estilos para a seção de personagens
 }
 
 /*
+===================
+Página linha do tempo
+====================
+*/
+
+.timeline {
+    position: relative; /*elemento fica na posição normal*/
+    padding: 20px 0;
+}
+
+/*linha vertical conectando os pontos, aprendido no canal Coding2GO*/
+.timeline::before {
+    content: "";
+    position: absolute;      /*vai para o começo, na esquerda */
+    left: 6.5px;              /*posição horizontal da linha*/
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--branco);
+}
+
+.timeline-item { 
+    display: flex;  /*um do ladinho do outro*/
+    gap: 32px;
+    margin: 60px 0 240px 0;
+    margin-bottom: 120px;
+    position: relative;
+}
+
+/*quadrado marcador*/
+.timeline-marcador { /*basicamente um container sem nenhum texto*/
+    width: 16px;
+    height: 16px;
+    background-color: var(--branco);
+    flex-shrink: 0; /*elemento não encolhe no grid*/
+    margin-top: 4px;
+    position: relative;
+    z-index: 1;  /*Fica sobre os itens, no caso, sobre a linha*/
+}
+
+.timeline-titulo {
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    margin: 0 0 16px;
+}
+
+/*Foto e texto um do ladinho do outro*/
+.timeline-corpo {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.timeline-corpo img {
+    width: 320px;
+    flex-shrink: 0;
+    filter: grayscale(100%) contrast(115%);
+}
+
+.timeline-corpo p {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/*
 ==================================
 Elenco cards
 ===================================
@@ -275,6 +319,7 @@ Elenco cards
      width: 240px;
     height: 160px;
     object-fit: cover;
+    filter: grayscale(100%) contrast(88%);
 }
 
 .ator {
@@ -287,6 +332,11 @@ Elenco cards
     object-fit: cover;
 }
 
+#said-elenco {
+    filter: grayscale(100%) contrast(100%);
+}
+
 .ator p {
 
 }
+
