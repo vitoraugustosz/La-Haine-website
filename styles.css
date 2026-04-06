@@ -2,6 +2,7 @@
 :root{
     --preto:        #0a0a0a;
     --branco:       #f2f0eb;
+    --cinza:        #b3b1ae;
     --accent:       #c0392b;
 
 
@@ -62,6 +63,13 @@ h1.h1-home {
     font-size: 15em;
     text-align: center;
     margin-bottom: 500px;
+}
+
+h1 {
+    font-family: var(--font-title);
+    margin: 1vh 5vw 1vh 5vw;
+    padding: 8vh 8vw 3vh 8vw;
+    font-size: 3em;
 }
 
 h2 {
@@ -196,6 +204,24 @@ blockquote {
   to { width: 51ch }
 }
 
+.typewriter3 {
+  overflow: hidden; 
+  border-right: .15em solid var(--branco); 
+  white-space: nowrap;
+  margin: 0 auto 500px auto;;
+  letter-spacing: .15em;
+  width: 0;
+  animation: 
+    digitando3 3.5s steps(27, end) forwards,
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes digitando3 {
+  from { width: 0 }
+  to { width: 37ch }
+}
+
+
 /* =-=-=-=-=-=-=-=--=-=-=-=-==== 
 Estilos para a seção de personagens 
 =-=-=-=--=-==-=-=-=-=-=-=-=-=-=-=*/
@@ -265,6 +291,116 @@ Estilos para a seção de personagens
 .card-personagem:hover p {
     color: var(--preto);
 }
+
+
+/*
+================================================
+Seção Recepção & Prêmios
+================================================
+*/
+ 
+.recepcao {
+    margin: 0 0 500px 0;
+    padding: 60px 0;
+}
+ 
+.recepcao-rotulo {
+    text-align: center;
+    color: #333;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+ 
+.recepcao-notas {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 56px;
+}
+ 
+.nota-bloco {
+    text-align: center;
+}
+ 
+.nota-numero {
+    font-family: var(--font-test);
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--branco);
+    margin-bottom: 6px;
+}
+ 
+.nota-pct {
+    font-size: 2.5rem;
+}
+ 
+.nota-fonte {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 4px;
+}
+ 
+ 
+.premios-lista {
+    max-width: 700px;
+    margin: 0 auto 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+ 
+.premio-item {
+    display: grid;
+    grid-template-columns: 60px 200px 1fr;
+    gap: 16px;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid #111;
+    font-size: 12px;
+}
+ 
+.premio-ano {
+    color: var(--branco);
+    letter-spacing: 2px;
+}
+ 
+.premio-titulo {
+    color: #888;
+}
+ 
+.criticas-bloco {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+ 
+.critica {
+    border-left: 2px solid #1e1e1e;
+    padding-left: 20px;
+}
+ 
+.critica-texto {
+    font-size: 11px;
+    line-height: 1.9;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+ 
+.critica-fonte {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #333;
+    text-transform: uppercase;
+}
+ 
+/*
 
 /* 
 
@@ -435,7 +571,7 @@ Elenco cards
     object-fit: cover;
 }
 
-#said-elenco {
+#said-elenco, #marc-elenco, #francois-elenco {
     filter: grayscale(100%) contrast(100%);
 }
 
@@ -443,3 +579,88 @@ Elenco cards
 
 }
 
+/*
+=-=-=-=-=-=-=-=-=-=-=-==-====-==-=-===-===-====-=--==-===-==-=====
+Elenco 
+=-=--=-=-====-=-==--==-==-=-==-==--==-==-==-=-===-==-=======-=====-===
+*/
+ 
+.diretor-bloco {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    margin-bottom: 56px;
+    padding: 40px;
+}
+ 
+.diretor-foto {
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+    filter: grayscale(100%) contrast(110%);
+    display: block;
+}
+ 
+.diretor-info {
+    padding-top: 4px;
+}
+ 
+.elenco-rotulo {
+    color: #444;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+ 
+.diretor-nome {
+    font-family: var(--font-title);
+    font-size: 56px;
+    line-height: 0.95;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+ 
+.diretor-bio {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 400px;
+    margin-bottom: 24px;
+}
+ 
+.diretor-premio {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #f2f0eb;
+    padding-top: 20px;
+}
+ 
+
+ 
+
+ 
+.sep-texto {
+    color: #333;
+    font-size: 10px;
+    letter-spacing: 5px;
+    white-space: nowrap;
+}
+ 
+.ator.protagonista img {
+    height: 220px;
+    border-bottom: 2px solid var(--branco);
+}
+ 
+.ator h3 {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin: 10px 0 4px;
+}
+ 
+.ator p {
+    font-size: 11px;
+    color: var(--cinza);
+}

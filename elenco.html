@@ -18,58 +18,87 @@
         <main>
             <h1>Elenco</h1>
             <article class="elenco">
-                <div class="grid-elenco">
-                    <div class="diretor">
-                        <img src="assets/kassovitz-as-director.jpg">
-                        <h3>Mathieu Kassovitz</h3>
-                        <p class="personagem">
-                            Best Director Cannes Film Festival 1995
-                        </p>
-                    </div>
 
-                    <div class="ator">
+                <!-- Bloco do diretor — destaque separado -->
+                <div class="diretor-bloco">
+                    <img src="assets/kassovitz-as-director.jpg" class="diretor-foto">
+                    <div class="diretor-info">
+                        <p>Direção</p>
+                        <h2 class="diretor-nome">Mathieu Kassovitz</h2>
+                        <p class="diretor-bio">Aos 27 anos, Kassovitz filmou La Haine em 17 dias, em preto e branco, nas periferias de Paris. O filme nasceu da indignação com a morte de Makome M'Bowole, morto por um policial em 1993. Com orçamento mínimo e elenco quase desconhecido, criou um dos filmes mais importantes do cinema francês.</p>
+                        <p class="diretor-premio"><span class="accent">★</span> Melhor Diretor — Festival de Cannes 1995</p>
+                    </div>
+                </div>
+                <!-- Grade de atores -->
+                <div class="grid-elenco">
+                    <div class="ator protagonista">
                         <img src="assets/Vincent-Cassel.jpg">
                         <h3>Vincent Cassel</h3>
                         <p>como Vinz</p>
                     </div>
 
-                    <div class="ator" id="hubert-img-elenco">
+                    <div class="ator protagonista" id="hubert-img-elenco">
                         <img src="assets/hubert_kounde.png">
                         <h3>Hubert Koundé</h3>
                         <p>como Hubert</p>
                     </div>
 
-                    <div class="ator" id="said-elenco">
+                    <div class="ator protagonista" id="said-elenco">
                         <img src="assets/Saïd-Taghmaoui.jpg">
                         <h3>Saïd Taghmaoui</h3>
                         <p>como Saïd</p>
                     </div>
 
                     <div class="ator">
-                        <img src="assets/marc-duret.jpg">
+                        <img src="assets/marc-duret.jpg" id="marc-elenco"> 
                         <h3>Marc Duret</h3>
                         <p>como Inspetor Notre Dame</p>
                     </div>
 
                     <div class="ator">
-                        <img src="assets/kassovitz-as-actor.jpg">
+                        <img src="assets/kassovitz-as-actor.jpg" id="kassovitz-ator-elenco">
                         <h3>Mathieu Kassovitz</h3>
                         <p>como Skinhead</p>
                     </div>
 
                     <div class="ator">
-                        <img src="assets/Benoit-magimel.jpg">
+                        <img src="assets/Benoit-magimel.jpg" id="benoit-elenco">
                         <h3>Benoît Magimel</h3>
                         <p>como Benoît</p>
                     </div>
 
                     <div class="ator">
-                        <img src="assets/francois-levantal.jpg">
+                        <img src="assets/francois-levantal.jpg" id="francois-elenco">
                         <h3>François Levantal</h3>
                         <p>como Astérix</p>
                     </div>
                 </div>
             </article>
         </main>
+        <footer>
+        <div class="footer-conteudo">
+            <div class="footer-bloco">
+                <p class="footer-rotulo">Filme</p>
+                <p>La Haine</p>
+                <p>França, 1995</p>
+                <p>93 minutos</p>
+            </div>
+            <div class="footer-bloco">
+                <p class="footer-rotulo">Equipe</p>
+                <p>Direção — Mathieu Kassovitz</p>
+                <p>Produção — Christophe Rossignon</p>
+                <p>Roteiro — Mathieu Kassovitz</p>
+            </div>
+            <div class="footer-bloco">
+                <p class="footer-rotulo">Referências</p>
+                <a href="https://www.imdb.com/title/tt0113247/" target="_blank">IMDB</a>
+                <a href="https://pt.wikipedia.org/wiki/O_%C3%93dio" target="_blank">Wikipedia</a>
+            </div>
+        </div>
+        <div class="footer-rodape">
+            <p>Trabalho acadêmico — FrontEnd I - IFSC</p>
+            <p class="footer-frase">"Jusqu'ici tout va bien."</p>
+        </div>
+    </footer>
     </body>
 </html>
