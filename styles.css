@@ -7,6 +7,7 @@
 
     --font-title: 'Bebas Neue', sans-serif;
     --font-body: "IBM Plex Mono", monospace;
+    --font-test: 'Notable', sans-serif;
 }
 
 body {
@@ -57,7 +58,7 @@ a:active {
 }
 
 h1.h1-home {
-    font-family: var(--font-title);
+    font-family: var(--font-test);
     font-size: 15em;
     text-align: center;
     margin-bottom: 500px;
@@ -72,6 +73,7 @@ h2 {
 section {
     margin-bottom: 500px;
 }
+
 
 article {
     margin: 0 5vw;
@@ -90,46 +92,11 @@ main.page-timeline {
     color: var(--accent);
 }
 
-
-/*
-=======================================
-Digitando
-====================================
-*/
-
-blockquote {
-    text-align: center; 
-    width: fit-content;
-    height: fit-content;
+.aspas {
+    font-size: 3rem;
+    color: var(--accent);
+    margin: 0 8px;
 }
-
-.typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid var(--branco); /* The typewriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto 500px auto;;
-  letter-spacing: .15em; /* Adjust as needed */
-  width: 0;
-  /* Adjust 'steps' to match the number of characters in your text */
-  animation: 
-    typing 3.5s steps(27, end) forwards,
-    blink-caret .75s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 31ch }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--branco); }
-}
-
-
-
 
 .hero h2 {
     font-size: 2rem;
@@ -151,6 +118,82 @@ blockquote {
     content: "";
     display: block;
     clear: both;
+}
+
+.video-filme {
+    width: 100%;
+    display: block;
+    filter: grayscale(100%) contrast(110%);  /* P&B como o filme */
+}
+
+.video-container {
+    position: relative;
+    border: 1px solid #1e1e1e;              /* borda sutil brutalista */
+    overflow: hidden;
+}
+
+.video-legenda {
+    font-family: var(--font-body);
+    font-size: 10px;
+    color: #444;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 0 0;
+}
+
+/*
+=======================================
+Digitando
+====================================
+*/
+
+blockquote {
+    text-align: center; 
+    width: fit-content;
+    height: fit-content;
+}
+
+.typewriter1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--branco); /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto 500px auto;;
+  letter-spacing: .15em; /* Adjust as needed */
+  width: 0;
+  /* Adjust 'steps' to match the number of characters in your text */
+  animation: 
+    digitando1 3.5s steps(27, end) forwards,
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes digitando1 {
+  from { width: 0 }
+  to { width: 31ch }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--branco); }
+}
+
+.typewriter2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--branco); /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto 500px auto;;
+  letter-spacing: .15em; /* Adjust as needed */
+  width: 0;
+  /* Adjust 'steps' to match the number of characters in your text */
+  animation: 
+    digitando2 3.5s steps(27, end) forwards,
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes digitando2 {
+  from { width: 0 }
+  to { width: 51ch }
 }
 
 /* =-=-=-=-=-=-=-=--=-=-=-=-==== 
@@ -221,6 +264,69 @@ Estilos para a seção de personagens
 .card-personagem:hover h3,
 .card-personagem:hover p {
     color: var(--preto);
+}
+
+/* 
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Footer
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*/
+
+footer {
+    margin-top: 80px;
+    border-top: 1px solid #1e1e1e;
+    padding: 40px 48px 24px;
+    font-family: var(--font-body);
+}
+
+.footer-conteudo {
+    display: flex;
+    gap: 64px;
+    margin-bottom: 40px;
+}
+
+.footer-bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-bloco p, .footer-bloco a {
+    font-size: 11px;
+    color: #555;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-bloco a:hover {
+    color: var(--branco);
+}
+
+.footer-rotulo {
+    color: #333;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.footer-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #111;
+}
+
+.footer-rodape p {
+    font-size: 10px;
+    color: #333;
+}
+
+.footer-frase {
+    font-style: italic;
+    color: #222;
 }
 
 /*
